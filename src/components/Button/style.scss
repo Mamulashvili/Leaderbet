@@ -1,0 +1,30 @@
+@import '../../assets/scss/_variables';
+
+.button {
+  background-color: $header-bg-btn-rounded;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .append-icon {
+    margin-right: 10px;
+  }
+
+  .prepend-icon {
+    margin-left: 10px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: $lb-text-color-primary;
+    cursor: pointer;
+  }
+}

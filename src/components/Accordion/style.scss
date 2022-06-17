@@ -1,0 +1,87 @@
+// Accordion
+$arrow-img: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAABGlBMVEUAAABhYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmthYmuVQy6AAAAAXXRSTlMAAQIDBAUGEhQVFxgZGhweHyAhIyUmKCkrLS8wMTM1Nzg6PD9AQUJERklLTU95hYiLjI6RkpWXmJudnqKjpaaqq62wsrS1t7m8vsDBw8XHyMrMzs/R7/Hz9ff5+/22M+foAAABS0lEQVRo3t3ZVVpCUQBF4YNexcbuxsTuQEKRUMAG88x/GrZSH093r4e7JvAPYBlTL79j5LUU847esFatfBpq5dvQKr+GUvk3dEqpoVLKDY1SaUiUNWsBZQNRNhFlC1G2EWUHUXYJxbeHKPuIcoAoh4hyhCjHiBJGlBNEiSBKFFFiiBInlIZTRDlDlASinCNKElFShNKYRpQMolwgyiWiZAnFySFKHlGuCKXpGlFuEOUWUe4IpfkeUR4QpVBD8bmMrFYbds5lYwUwQoCxDBhLgLEIGAuAMQ8YQcCYBYwZwJgGjCnAmASMCcAYB4wxwBgFjBHAGAaMoTe9MQgYA4DRDxh9r94wegGj50VvdANGADC6nr1hdAJGx5PeaAeMtkdvGK2EUdQbtVa564Yx64BRpUiMCkVklCkyo0QRGn+K1PhRxMaXIjc+FMBwq3edRndc7wZBjQAAAABJRU5ErkJggg==") no-repeat center;
+
+.accordion {
+  box-shadow: 0 3px 6px rgb(46 81 164 / 16%);
+
+  .accordion-item {
+    border-top: 1px solid #f8f8f8;
+    color: #414141;
+    cursor: pointer;
+  }
+
+  .accordion-item-active {
+    background: #f8f8f8;
+
+    .accordion-title {
+      border-left: 0.4rem solid #005473;
+    }
+  }
+
+  .accordion-title {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.3rem 0.4rem;
+    font-size: .9rem;
+    border-left: 0.4rem solid transparent;
+
+    .arrow {
+      background: $arrow-img;
+      width: 2.5rem;
+      height: 2rem;
+      background-size: auto 40%;
+      transition: .3s ease-in;
+    }
+
+    .rotate-arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .accordion-content-show {
+    height: auto;
+    max-height: 9999px;
+    transition: max-height .5s cubic-bezier(1, 0, 1, 0);
+  }
+
+
+  ul {
+    padding: 1rem;
+
+    li {
+      width: 100%;
+
+      &>div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      }
+
+      label {
+        font-size: 12px;
+        width: 100%;
+        height: 25px;
+      }
+
+      .styled-checkbox+label {
+        &::before {
+          width: .5rem;
+          height: .5rem;
+        }
+
+        &::after {
+          left: 1px;
+          top: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../assets/scss/_variables';
+
+.input-wrapper {
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $lb-text-color-primary;
+  margin: 0 10px;
+
+
+  .def-input {
+    height: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+}

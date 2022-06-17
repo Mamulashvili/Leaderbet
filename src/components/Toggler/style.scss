@@ -1,0 +1,49 @@
+.toggler {
+  margin: 0 25px;
+  min-width: 140px;
+
+  label {
+    cursor: pointer;
+    font-size: .9rem;
+  }
+
+  input {
+    height: 0;
+    width: 0;
+    // visibility: hidden;
+    display: none;
+  }
+
+  label.toggler-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: #BFC5D1;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 20px;
+      height: 20px;
+      background: #63738E;
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+
+    &:active:after {
+      width: 20px;
+    }
+  }
+
+  input:checked+label.toggler-label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+
+}

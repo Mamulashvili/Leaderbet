@@ -1,0 +1,59 @@
+* {
+  font-family: sans-serif;
+}
+
+.brd {
+  border: 1px solid transparent;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.rounded {
+  border-radius: 50px;
+}
+
+.w-1 {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.no-visible {
+  opacity: 0;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .desktop-only {
+    display: none !important;
+  }
+}

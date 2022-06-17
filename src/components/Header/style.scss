@@ -1,0 +1,141 @@
+@import '../../assets/scss/_variables';
+
+header {
+  width: 100%;
+  padding: 0 20px;
+  min-height: 64px;
+  background-color: $header-bg-primary;
+  box-sizing: border-box;
+
+  .logo-wrapper {
+    background-size: 64px;
+    min-width: 80px;
+    min-height: 100%;
+    min-height: 64px;
+
+    .logo {
+      width: 225px;
+    }
+  }
+
+  .nav-buttons-wraper {
+    padding-left: 4rem;
+
+    .nav-btn {
+      margin-right: 10px;
+      padding: 9px 20px;
+    }
+  }
+
+  .auth-form-wrapper {
+
+    .registration-btn {
+      padding: .5rem;
+      transition: all .5s ease-in-out !important;
+      background: #2b9b30 $lb-registration-btn-bg no-repeat;
+      background-size: 150%;
+      background-position: left;
+
+      font-size: 1rem;
+      border-radius: $lb-def-border-radius;
+
+      &:hover {
+        background-size: 200%;
+      }
+    }
+
+    .input-wrapper {
+      padding: 0 10px;
+      max-width: 200px;
+      background-color: $lb-input-bg-primary;
+
+      &:hover {
+        background-color: #d4d7e5;
+
+        .recovery-btn button {
+          background-color: #c8cbdc;
+          color: $lb-text-color-secondary;
+        }
+      }
+
+      input {
+        padding: 0 10px;
+        color: $header-color-btn-primary;
+        font-weight: bold;
+        max-width: 50%;
+      }
+    }
+
+    .recovery-btn button {
+      background: #474a54;
+      color: #afb2c2;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    .login-btn {
+      border-radius: $lb-def-border-radius;
+      background-color: $header-bg-btn-login;
+      padding: 0.5rem 1.5rem;
+    }
+
+  }
+}
+
+@media (max-width: 1360px) {
+  .button button {
+    font-size: .7rem !important;
+  }
+
+  header {
+    .auth-form-wrapper {
+
+      .login-btn,
+      .registration-btn {
+        padding: .3rem .7rem;
+      }
+
+      .input-wrapper {
+        max-width: 131px;
+
+        input {
+          font-size: .7rem;
+          padding: 0 5px;
+        }
+      }
+    }
+
+    .nav-buttons-wraper {
+      .nav-btn {
+        padding: .3rem .7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  header {
+    display: none !important;
+  }
+
+  .logo-wrapper {
+    background: url('../../assets/images/lb.png') no-repeat left center;
+  }
+
+  .nav-buttons-wraper {
+    padding-left: 0 !important;
+
+    .nav-btn {
+      padding: 9px !important;
+
+      button {
+        display: none;
+      }
+
+      .btn-icon {
+        margin: 0 !important;
+      }
+    }
+  }
+}
